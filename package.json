@@ -1,15 +1,20 @@
 {
-  "name": "nightwatch",
+  "name": "nightwatch-cucumber",
   "version": "1.0.0",
-  "description": "Practicing nightwatchjs e2e testing powered by selenium and cucumber",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch"
+    "e2e-test": " cucumber-js --require cucumber.conf.js --require step-definitions "
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^7.0.0",
     "chromedriver": "^100.0.0",
-    "nightwatch": "^2.0.10"
+    "nightwatch": "^1.5.1",
+    "nightwatch-api": "^3.0.1"
+  },
+  "dependencies": {
+    "cucumber": "^7.0.0-rc.0"
   }
 }
