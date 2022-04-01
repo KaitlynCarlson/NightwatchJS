@@ -1,0 +1,15 @@
+{
+  "name": "nightwatch",
+  "version": "1.0.0",
+  "description": "Practicing nightwatchjs e2e testing powered by selenium and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^100.0.0",
+    "nightwatch": "^2.0.10"
+  }
+}
