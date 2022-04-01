@@ -24,11 +24,17 @@ Then('the search result matches {string}', function (string) {
     return  client.assert.containsText('#main', string);
   });
 
-// Then(/^I search "([^"]*)" in search form $/, searchValue => {
-//     return  client.setValue('input[type=text]', [searchValue, browser.Keys.ENTER]);    
-//   });
+Then(/^I search "([^"]*)" in search form $/, searchValue => {
+    return  client.setValue('input[type=text]', [searchValue, browser.Keys.ENTER]);    
+  });
  
-// Then(/^ the search result matches "([^"]*)" $/, searchValue => {
-//     return  client.assert.containsText('#main', searchValue);
+Then(/^ the search result matches "([^"]*)" $/, searchValue => {
+    return  client.assert.containsText('#main', searchValue);
    
-//   }); 
+  }); 
+Then('I click the top search result', () => {
+    return client.click('#rso > div:nth-child(1) > div > div > div > div > div > div > div.yuRUbf > a > h3');
+  });
+Then('it should redirect to nightwatchjs home page', () => {
+  return client.pause(1000).assert.urlEquals('https://nightwatchjs.org/');
+});
